@@ -1,9 +1,9 @@
 class Project
-  attr_reader :name, :id
+  attr_reader :id, :name
 
   def initialize(attributes)
-    @name = attributes.fetch(:name)
     @id = attributes.fetch(:id)
+    @name = attributes.fetch(:name)
   end
 
   def ==(project_to_compare)
@@ -26,6 +26,10 @@ class Project
     @id = result.first().fetch("id").to_i
   end
 
+  def self.clear
+    DB.exec("DELETE FROM projects *;")
+  end
+
   def self.find(id)
     project = DB.exec("SELECT * FROM projects WHERE id = #{id};").first
     name = project.fetch("name")
@@ -42,12 +46,18 @@ class Project
     Volunteer.find_by_project(self.id)
   end
 
-  def self.clear
-    DB.exec("DELETE FROM projects *;")
-  end
+  def self.search(project_name)
+      projects = []
+      returned_projects = DB.exec("SELECT * FROM projects WHERE name LIKE '#{project_name}%';")
+      returned_projects.each() do |project|
+        name = project.fetch("name")
+        id = project.fetch("id").to_i
+        projects.push(Project.new({:name => name, :id => id}))
+      end
+      projects
+    end
 
   def delete
-  DB.exec("DELETE FROM projects WHERE id = #{@id};")
-end
-
+    DB.exec("DELETE FROM projects WHERE id = #{@id};")
+  end
 end

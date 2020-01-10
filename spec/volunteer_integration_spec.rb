@@ -14,7 +14,7 @@ set(:show_exceptions, false)
 describe 'the project creation path', {:type => :feature} do
   it 'takes the user to the homepage where they can create a project' do
     visit '/'
-    fill_in('name', :with => 'Teaching Kids to Code')
+    fill_in('project_name', :with => 'Teaching Kids to Code')
     click_button('Create Project')
     expect(page).to have_content('Teaching Kids to Code')
   end

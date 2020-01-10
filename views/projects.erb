@@ -23,14 +23,17 @@
   <p>Hmm...There are currently no projects to display.</p>
   <% end %>
 
+  <p><a href="/projects/new">Create a New Project!</a></p>
 </div>
-  <div class="form">
-    <h1>If you are a Buildcorp manager, and want to start a new project, you can do so below:</h1>
-    <form action="/projects" method="post">
-      <div class="form-group">
-        <label for="name">Project name</label>
-        <input id="name" name="name" class="form-control" type="text">
-      </div>
-      <button type="submit" class="btn">Create Project</button>
-    </form>
-  </div>
+
+
+<div class="form">
+  <h1>If you are a Buildcorp manager, and want to start a new project, you can do so below:</h1>
+  <form action="/projects" method="post">
+    <div class="form-group">
+      <label for="name">Project name</label>
+      <input id="n" name="project_name" class="form-control" type="text">
+    </div>
+    <button type="submit" class="btn">Create Project</button>
+  </form>
+</div>
