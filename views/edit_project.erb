@@ -1,0 +1,16 @@
+<h1 class="opening">Update <%= @project.name() %></h1>
+<div class="form">
+  <form action="/projects/<%= @project.id() %>" method="post">
+    <input name="_method" type="hidden" value="patch">
+    <label for="name">Rename!</label>
+    <input id="name" name="name" type="text">
+    <button type="submit">Update!</button>
+  </form>
+</div>
+<div class="form">
+  <form action="/projects/<%= @project.id() %>" method="post">
+    <input name="_method" type="hidden" value="delete">
+    <button type="submit">Delete!</button>
+    <p class="logic"><a href="/projects">Return to project list!</a></p>
+  </form>
+</div>
