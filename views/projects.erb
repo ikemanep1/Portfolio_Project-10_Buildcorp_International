@@ -1,0 +1,36 @@
+<h1 class="opening">Welcome to Buildcorp international!</h1>
+
+<p class="introduction">We are a non-profit architectural think-tank that works to design innovative new structures that help maintain the planet's health. Our database contains all of projects currently ongoing. If you are eager to start designing the buildings of the future, you've come to the right place!</p>
+<div class="form">
+  <p>curious about volunteering? Please search our database for projects that might peak your interests</p>
+  <form action="/projects" method="get">
+    <div class="form-group">
+      <label for="search">Search database for projects</label>
+      <input id="search" name="search" class="form-control" type="text">
+    </div>
+    <button type="submit" class="btn">find me!</button>
+  </form>
+</div>
+<div class="logic">
+  <h3>project database (any projects you make will show up here)</h3>
+  <% if @projects.any? %>
+  <ul>
+    <% @projects.each do |project| %>
+    <li><a href="/words/<%= project.id %>"><%= project.name %></a></li>
+  </ul>
+  <% end %>
+  <% else %>
+  <p>Hmm...There are currently no projects to display.</p>
+  <% end %>
+
+</div>
+  <div class="form">
+    <h1>If you are a Buildcorp manager, and want to start a new project, you can do so below:</h1>
+    <form action="/projects" method="post">
+      <div class="form-group">
+        <label for="name">Project name</label>
+        <input id="name" name="name" class="form-control" type="text">
+      </div>
+      <button type="submit" class="btn">Create Project</button>
+    </form>
+  </div>
