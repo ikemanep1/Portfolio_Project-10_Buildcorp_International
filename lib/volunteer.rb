@@ -12,6 +12,18 @@ class Volunteer
     (self.name() == volunteer_to_compare.name()) && (self.project_id() == volunteer_to_compare.project_id())
   end
 
+  def self.all
+    returned_volunteers = DB.exec("SELECT * FROM volunteers;")
+    volunteers = []
+    returned_volunteers.each() do |volunteer|
+      name = volunteer.fetch("name")
+      id = volunteer.fetch("id").to_i
+      project_id = volunteer.fetch("project_id").to_i
+      volunteers.push(Volunteer.new({:name => name, :project_id => project_id, :id => id}))
+    end
+    volunteers
+  end
+
   def self.find_by_project(pro_id)
   volunteers = []
   returned_volunteers = DB.exec("SELECT * FROM volunteers WHERE project_id = #{pro_id};")
