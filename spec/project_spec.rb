@@ -5,25 +5,25 @@ require 'pry'
 require "spec_helper"
 
 describe Project do
-  # describe '#name' do
-  #   it 'returns the project name' do
-  #     project = Project.new({:name => 'Teaching Kids to Code', :id => nil})
-  #     expect(project.name).to eq 'Teaching Kids to Code'
-  #   end
-  # end
+  describe '#name' do
+    it 'returns the project name' do
+      project = Project.new({:name => 'Teaching Kids to Code', :id => nil})
+      expect(project.name).to eq 'Teaching Kids to Code'
+    end
+  end
 
-  # context '#id' do
-  #   it 'returns the id of the project before saving project' do
-  #     project = Project.new({:name => 'Teaching Kids to Code', :id => nil})
-  #     expect(project.id).to eq nil
-  #   end
-  #
-  #   it 'returns the id of the project after saving project' do
-  #     project = Project.new({:name => 'Teaching Kids to Code', :id => nil})
-  #     project.save
-  #     expect(project.id).to be_an_instance_of Integer
-  #   end
-  # end
+  context '#id' do
+    it 'returns the id of the project before saving project' do
+      project = Project.new({:name => 'Teaching Kids to Code', :id => nil})
+      expect(project.id).to eq nil
+    end
+
+    it 'returns the id of the project after saving project' do
+      project = Project.new({:name => 'Teaching Kids to Code', :id => nil})
+      project.save
+      expect(project.id).to be_an_instance_of Integer
+    end
+  end
 
   describe '#==' do
     it 'is the same project if two projects have the same name' do
@@ -86,12 +86,12 @@ describe Project do
     end
   end
 
-  # context '#delete' do
-  #   it 'allows a user to delete a project' do
-  #     project = Project.new({:name => 'Teaching Kids to Code', :id => nil})
-  #     project.save
-  #     project.delete
-  #     expect(Project.all).to eq []
-  #   end
-  # end
+  context '#delete' do
+    it 'allows a user to delete a project' do
+      project = Project.new({:name => 'Teaching Kids to Code', :id => nil})
+      project.save
+      project.delete
+      expect(Project.all).to eq []
+    end
+  end
 end
