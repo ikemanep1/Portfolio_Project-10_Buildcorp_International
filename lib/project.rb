@@ -33,6 +33,11 @@ class Project
     Project.new({:name => name, :id => id})
   end
 
+  def update(name)
+    @name = name
+    DB.exec("UPDATE projects SET name = '#{@name}' WHERE id = #{@id};")
+  end
+
   def volunteers
     Volunteer.find_by_project(self.id)
   end
