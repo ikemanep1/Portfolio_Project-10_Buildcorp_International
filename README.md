@@ -17,6 +17,10 @@ __
 
 # dump code
 
+# database visual
+
+![This is how the database looks](public/screenshot.png)
+
 # Known Bugs
 
 _21 of 22 specs will pass. The final one will not, because the volunteer functionality in views/routing will not function._
