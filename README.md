@@ -1,12 +1,12 @@
-# __
+# _Buildcorp International!_
 
-### __
+### _a projects/volunteering database using psql._
 
 ### By _**Ike Esquivel-Pilloud**_
 
 # Description
 
-__
+_This program is a database-practice site. It lists projects, and volunteers working on those projects._
 
 ### Setup/Installation Requirements
 
@@ -14,6 +14,7 @@ __
 * _2: navigate to the file through the terminal_
 * _3: type 'gem install' and 'bundle' into the console_
 * _4: type 'ruby app.rb' into the console and navigate to 'localhost:4567' in your browser_
+* _5: in the terminal, create a database using psql and type psql [DATABASE_NAME] < database_backup.sql to upload the database that this application uses to your computer. Make sure your computer has all the necessary applications to run a ruby program.
 
 # dump code
 
@@ -48,7 +49,8 @@ _the program as written in ruby, using atom, and tested with rspec and capybara.
 -'sinatra'
 -'capybara'
 -'sinatra-contrib'
-
+-'psql'
+-'postgres'
 
 # License
 
