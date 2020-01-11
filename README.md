@@ -15,18 +15,19 @@ __
 * _3: type 'gem install' and 'bundle' into the console_
 * _4: type 'ruby app.rb' into the console and navigate to 'localhost:4567' in your browser_
 
-### Heroku location
-
-
+# dump code
 
 # Known Bugs
 
-__
+_21 of 22 specs will pass. The final one will not, because the volunteer functionality in views/routing will not function._
 
 # specs
 | Behavior        | Input           | Outcome  |
 | ------------- |:-------------:| -----:|
-|  |  |  |
+| The program will store a project within its database. | "hydro-powered windmill" | "hydro-powered windmill" |
+| The program will store a list of volunteers for projects stored in its database. | "hydro-powered windmill", "Ike Esquivel-Pilloud" | "hydro-powered windmill", "Ike Esquivel-Pilloud" |
+| The program will delete/update projects when commanded to do so. | "Delete!" | "there are no projects to display" |
+| The program will delete/update volunteers for projects stored in its database when commanded to do so. | "Update!" | "Isaac Esquivel-Pilloud" |
 
 ### Support and contact details
 
