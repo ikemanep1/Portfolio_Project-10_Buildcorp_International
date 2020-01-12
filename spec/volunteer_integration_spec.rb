@@ -61,7 +61,7 @@ describe 'the volunteer detail page path', {:type => :feature} do
     visit "/projects/#{project_id}"
     click_link('Jasmine')
     fill_in('name', :with => 'Jane')
-    click_button('Update Volunteer')
+    click_button('Rename!')
     expect(page).to have_content('Jane')
   end
 end
