@@ -1,0 +1,37 @@
+body {
+  background: radial-gradient(circle, #000066, #8cff1a, #000066);
+}
+.opening {
+  margin-top: 300px;
+  font-family: cursive;
+  background-color:#565d5b;
+  color: #fb0000;
+  text-align: center;
+  margin-bottom: 25px;
+  border: 3px solid #f2be13;
+}
+.introduction {
+  font-family: cursive;
+  background-color:#565d5b;
+  color: #fb0000;
+  text-align: center;
+  border: 3px solid #f2be13;
+}
+.form {
+  font-family: cursive;
+  background-color:#565d5b;
+  color: #fb0000;
+  text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  border: 3px solid #f2be13;
+}
+.logic {
+  font-family: cursive;
+  background-color:#565d5b;
+  color: #fb0000;
+  text-align: center;
+  margin-top: 25px;
+  border: 3px solid #f2be13;
+}

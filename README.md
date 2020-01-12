@@ -24,7 +24,7 @@ _This program is a database-practice site. It lists projects, and volunteers wor
 
 # Known Bugs
 
-_21 of 22 specs will pass. The final one will not, because the volunteer functionality in views/routing will not function._
+__
 
 # specs
 | Behavior        | Input           | Outcome  |
